@@ -1,0 +1,22 @@
+START
+    DECLARE String namabarang
+    DECLARE Integer jumlahbarang, hargabarang, totalharga, bayar, kembalian
+    
+    OUTPUT "Masukkan nama barang : "
+    INPUT namabarang
+    OUTPUT "Masukkan harga barang : "
+    INPUT hargabarang
+    OUTPUT "Masukkan jumlah barang : "
+    INPUT jumlahbarang
+    ASSIGN totalharga = hargabarang * jumlahbarang
+    OUTPUT "Nama Barang : " &namabarang &ToChar(13) &
+"Harga Barang : " &totalharga
+    OUTPUT "Masukkan uang pembayaran : "
+    INPUT bayar
+    IF bayar >= totalharga
+        Assign kembalian = bayar - totalharga
+        Output "Kembalian Anda adalah : " &kembalian
+    ELSE:
+        Output "Maaf uang Anda belum cukup"
+    END IF
+END
